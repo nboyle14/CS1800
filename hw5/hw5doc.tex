@@ -44,9 +44,20 @@ Let $f(n) = \sum^n_{y{=}1} (n^2 \cdot y^{13})$  \\\\
 % Don't include the problem statement in your submission (except for the first line).  \\\\
 
 {\color{blue}
-{\bf Answer:}
-
-
+{\bf Answer:} \\\\
+$f(n) = \sum^n_{y{=}1} (n^2 \cdot y^{13})$ \\\\
+$\sum^n_{y{=}1} (n^2 \cdot y^{13}) \leq \sum^n_{y{=}1} (n^2 \cdot n^{13})$ \\\\
+$\sum^n_{y{=}1} (n^2 \cdot n^{13}) = n^2 \cdot n^{14} = n^{16}$ \\\\
+$g(n) = n^{16}$ \\\\
+$f(n) = O(n^{16})$ \\\\
+\\\\\\
+$\sum^n_{y{=}1} (n^2 \cdot y^{13}) \geq \sum^n_{y{=}\frac{n}{2}} (n^2 \cdot n^{13}) \geq \sum^n_{y{=}\frac{n}{2}} (n^2 \cdot {\frac{n}{2}}^{13})$ \\\\
+$\sum^n_{y{=}\frac{n}{2}} (n^2 \cdot n^{13}) \geq $ \\\\
+$\sum^n_{y=\frac{n}{2}} \left(n^2 \cdot \left(\frac{n}{2}\right)^{13}\right) = \frac{n}{2} \cdot n^2 \cdot \frac{n^{13}}{2^{13}}$ \\\\
+$\frac{n}{2} \cdot n^2 \cdot \frac{n^{13}}{2^{13}} = \frac{1}{2^{14}} \cdot n^{16}$ \\\\$f(n) \geq n^{16}$ \\\\
+$f(n) = \Omega(n^{16})$\\\\
+\\\\
+$f(n) = \theta(n^{16})$$\blacksquare$\\\\
 }
 
 
@@ -71,7 +82,19 @@ $\Large Y = \sum\limits_{j=3}^n (X_j - X_{j-1}) $
 
 
 {\color{blue}
-{\bf Answer:}
+{\bf Answer:}\\\\
+$X_k$ and $Y$ are telescoping series\\\\
+$\Large X_k = \sum\limits_{i=2}^k (L_i - L_{i-1}) = L_k - L_1$\\\\
+$\Large Y = \sum\limits_{j=3}^n (X_j - X_{j-1}) = X_n - X_2$\\\\
+$X_n = L_n - L_1$\\\\ 
+$X_2 = L_2 - L_1$\\\\
+$X_n - X_2 = L_n - L_1 - (L_2 - L_1)$\\\\
+$X_n - X_2 = L_n - L_1 - L_2 + L_1$\\\\
+$Y = X_n - X_2 = L_n  - L_2$$\blacksquare$\\\\
+
+
+
+
 
 
 }

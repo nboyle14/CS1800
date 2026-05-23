@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.11)  22 MAY 2026 21:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.11)  23 MAY 2026 00:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**hw5doc.tex
+**hw5doc
 (./hw5doc.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -205,7 +205,7 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count280
 \l__pdf_internal_box=\box54
 )
-No file hw5doc.aux.
+(./hw5doc.aux)
 \openout1 = `hw5doc.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -222,6 +222,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -299,14 +300,160 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--62
+
+ []
+
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 64.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 75.
 
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 66.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 77.
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 87.
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 88.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--94
+
+ []
 
 [2] (./hw5doc.aux)
  ***********
@@ -315,26 +462,28 @@ L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3858 strings out of 474222
- 58394 string characters out of 5748733
- 1924975 words of memory out of 5000000
- 26083 multiletter control sequences out of 15000+600000
+ 3861 strings out of 474222
+ 58439 string characters out of 5748733
+ 1930975 words of memory out of 5000000
+ 26084 multiletter control sequences out of 15000+600000
  563320 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,5n,65p,261b,192s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,5n,65p,257b,192s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/symbols/msam10.pfb>
-Output written on hw5doc.pdf (2 pages, 83471 bytes).
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols
+/msam10.pfb>
+Output written on hw5doc.pdf (2 pages, 104854 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 66 PDF objects out of 1000 (max. 8388607)
+ 39 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
