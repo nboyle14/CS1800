@@ -1,0 +1,94 @@
+\documentclass[12pt]{article} 
+
+\usepackage[top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm]{geometry}
+\usepackage{color,graphicx,amsmath,mathtools,amssymb,amsthm}
+\pagestyle{plain}
+
+\begin{document}  
+\pagestyle{empty}
+ 
+
+
+
+
+%\vskip0.5in
+
+
+%\noindent {\small This document is property of Northeastern University.  Unauthorized distribution of the content is not~permitted.} \\
+
+%\vskip0.5cm
+
+
+
+\begin{enumerate}
+
+\item 
+$T(n) = T(\frac{9n}{10}) + n$      %  \hskip1in      $T(1) = 1$
+
+{\color{blue} Answer:  \\
+
+(a)   
+
+...  \\
+
+
+(b)
+
+
+}
+
+
+
+
+
+\newpage
+
+
+\item  $S(n) = 9S(\frac{n}{3}) + n^2$     %  \hskip1in. $S(1) = 1$
+
+
+{\color{blue} Answer:  \\
+
+(a)   
+
+...  \\
+
+
+(b)
+
+
+}
+
+
+
+
+
+
+\end{enumerate} 
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
