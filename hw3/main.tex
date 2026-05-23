@@ -1,0 +1,171 @@
+\documentclass[12pt]{article} 
+
+\usepackage[top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm]{geometry}
+\usepackage{color,graphicx,amsmath,mathtools,amssymb}
+\pagestyle{plain}
+
+\begin{document}  
+\pagestyle{empty}
+ 
+
+
+
+%
+%\vskip0.5in
+%
+%
+%\noindent {\small This document is property of Northeastern University.  Unauthorized distribution of the content is not~permitted.}
+
+Homework 3: Nico Boyle, Owen Moorhus, Asher Olgeirson
+
+\begin{enumerate}
+
+
+% \item
+
+%       %%%%   Omitting the problem statement to reduce clutter      %%%%
+
+% A league has 16 teams.   In the regular season each team plays each other 6 times.
+% The season is played in 90 ``rounds". In  each round every team plays a game. 
+% Each team's  rank is determined by number of wins.   If two teams end up with the same record, their rank is determined via a new tie-breaker game. (What's relevant is that teams that end up with the same record at the end of the regular season have unresolved relative ranks).
+
+% During the season every team does their best to increase their rank, until possibly reaching a time when they realize that their rank can't change.
+
+% $\bullet$ What is the earliest possible round at which all teams in the league no longer care about improving their rank?  Equivalently, how large could $r$ be, so that with $r$ regular season rounds remaining none of the teams care? \\
+% $\bullet$ You should include an example of all team win records and justify why all teams no longer care.  \\
+% $\bullet$  You should explain why your value of $r$ couldn't be made larger.  Ideally you should mention the pigeonhole principle.\\
+
+
+\item
+
+{\color{blue}
+Largest valid value of $r$:  \\
+
+$r=4$
+\vskip1cm
+Example of win records: \\
+
+81,76,71,66,61,56,51,46,40,35,30,25,20,15,10,5\\
+
+Justification: \\
+
+The teams must be ranked s.t. $W_1 > W_2 > W_3 > ... > W_{16}$, where $W_i$ is the number of wins of team $i$.  \\
+16 total teams means there are 15 gaps between the teams.\\
+For no team to care about improving their rank, the gap between each team must be at least r+1 which leads to: 
+$W_1 - W_{16} \geq 15(r+1)$\\
+After 90 - r rounds, the largest possible difference between the first and last team is: 
+$90-r \geq 15(r+1)$\\
+Solving this inequality for r gives $r \leq 4.6875$.\\
+And because r must be an integer, $r=4$ is the largest valid value of r.\\
+
+\vskip1cm
+The pigeonhole principle is shows why r cannot be made larger than 4.\\
+If r were 5, with 15 gaps between the teams, there would need to be a total spread of 90: $15\cdot 6 = 90$. \\
+But with only 5 rounds remaining, the maximum spread is 85.\\
+Thus, if we take the possible win totals of the teams as the holes and the teams as the pigeons, then, with 5 rounds remaining,
+there are only 86 possible win totals (0 through 85).\\
+For no team to care about improving their rank, team wins must differ by at least 6, which means that there can only be 15 possible win totals (0,6,12,...,90).\\
+Thus, there are not enough holes to place all 16 teams while maintaing the required spacing of wins.\\
+}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\item
+Simplify the following expression, making one modification per line.\\
+On each line you should also  briefly explain what rule was used to get that line from the one above. 
+$\neg ( \neg (p\land q) \lor \neg (\neg q \land r) )$ \\
+
+%%%%.  To avoid LaTeX errors, make sure to leave a space after \neg \land \lor as in the sample. (E.g., don't write \negq)
+
+{\color{blue}
+1. $\neg ( (\neg p \lor \neg q) \lor \neg (\neg q \land r) ) \rightarrow$ Demorgan's on $\neg (p\land q) $\\
+2. $\neg ( (\neg p \lor \neg q) \lor  (q \lor \neg r) ) \rightarrow$ Demorgan's on $ \neg (\neg q \land r) $\\
+3. $\neg ( \neg p \lor \neg q \lor  q \lor \neg r ) \rightarrow$ Associative Law \\
+4. $p \land q \land  \neg q \land r \rightarrow $ Demorgan's on outer parenthesis \\
+5. $p \land F \land r \rightarrow$ $q \land  \neg q$ annihilates to F \\
+6. $F \rightarrow$ $p \land F \land r$ is always F \\
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+
+\item       %%%%.     Removing part of the problem statement to reduce clutter     %%%%%
+%
+%
+% Let $X$ denote a logic operator, defined as 
+Definition:    $a X b = \neg ( a \lor  b)$\\\\
+Show that we can simulate the following three expressions, with other expressions in which the only operator used is $X$. The expressions shouldn't include T, F or negation either.  You should provide step-by-step derivation with comments. Each change should be on a new line. Each line should be equivalent to the preceding line. \\
+a) $\neg p$ \\
+
+{\color{blue}
+
+$\neg p \leftrightarrow \neg p \lor \neg p$ as $p\lor p$ is always p
+
+$\neg p \lor \neg p \leftrightarrow \neg (p\lor p)$ by deMorgan's laws
+
+$\neg(p\lor p)\leftrightarrow pXp$ by definition
+
+}
+
+\vskip1cm
+
+b) $p\lor q$ \\
+
+{\color{blue}
+  $p\lor q \iff \neg (\neg (p\lor q))$ a double logical not cancels out via deMorgan's laws\\ 
+  $\iff \neg(pXq)$ the X operator is defined with a logical not \\ 
+  $\iff (pXq)X(pXq)$ as $pXp \iff \neg p$ as proved above
+
+}
+
+\vskip1cm
+
+c) $p\land q$\\
+
+{\color{blue}
+$p\land q \leftrightarrow \neg((\neg(p\lor p))\lor(\neg(q\lor q))$ assumed for the sake of argument \\
+$(\neg p) X (\neg q) \leftrightarrow \neg (\neg p \lor \neg q) $ as $pXp \leftrightarrow \neg p$, which was proven above \\
+$\neg(\neg p \lor \neg q) \leftrightarrow p\land q $ via truth table as:\\\\
+
+\[
+\begin{array}{|c|c|c|}
+\hline
+p & q & \neg(\neg p \lor \neg q) \\
+\hline
+T & T & T \\
+T & F & F \\
+F & T & F \\
+F & F & F \\
+\hline
+\end{array}
+\quad \leftrightarrow \quad
+\begin{array}{|c|c|c|}
+\hline
+p & q & p \land q \\
+\hline
+T & T & T \\
+T & F & F \\
+F & T & F \\
+F & F & F \\
+\hline
+\end{array}
+\]
+
+}
+
+
+
+\end{enumerate} 
+
+
+
+
+\end{document}
