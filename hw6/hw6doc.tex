@@ -1,7 +1,8 @@
-\documentclass[12pt]{article} 
+\documentclass[15pt]{article} 
 
 \usepackage[top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm]{geometry}
 \usepackage{color,graphicx,amsmath,mathtools,amssymb,amsthm}
+\usepackage{multicol}
 \pagestyle{plain}
 
 \begin{document}  
@@ -24,16 +25,57 @@
 
 \item 
 $T(n) = T(\frac{9n}{10}) + n$      %  \hskip1in      $T(1) = 1$
-
 {\color{blue} Answer:  \\
+(a)
+\begin{multicols}{2}
+$T(n) = T(\frac{9n}{10}) + n$ \\\\
+$T(\frac{9n}{10}) = T(\frac{9^2n}{10^2}) + \frac{9n}{10}$  \\\\
+$T(\frac{9^2n}{10^2}) = T(\frac{9^3n}{10^3}) + \frac{9^2n}{10^2}$  \\\\
+$\hspace{3cm} ...$ \\\\
+$T(\frac{9^{k-1}n}{10^{k-1}}) = T(\frac{9^{k}n}{10^k}) + \frac{9^{k-1}n}{10^{k-1}}$ \\\\
+$T(\frac{9^{k}n}{10^{k}}) = T(1) $
+\columnbreak 
+\begin{center}
+$ n $\\
+$\downarrow$ \\ 
+$\frac{9n}{10}$\\
+$\downarrow$ \\ 
+$\frac{9^2n}{10^2}$ \\
+$\downarrow$ \\
+...\\
+$\downarrow$\\
+$\frac{9^{k-1}n}{10^{k-1}}$ \\
+$\downarrow$\\
+$1$\\
+\end{center}
+\end{multicols}
+From the last equation, we have $\frac{9^{k}}{10^{k}} \cdot n = 1$\\
+$n = (\frac{10}{9})^k$ \\
+$k = \frac{\log n }{\log (\frac{10}{9})}$ \\
+$k = \log_{(\frac{10}{9})} n$ \hspace{2cm} Thus, the depth of the recursion is $\log_{(\frac{10}{9})} n$ \\
+The total cost of the recursion is the sum of the cost at each level for the depth of the recursion, which is $\log_{(\frac{10}{9})} n$. \\
+Thus, the total cost is given by: $\sum^{\log_{(\frac{10}{9})}n}_{k{=}0} (\frac{9}{10})^k \cdot n$  \\\\
+$\sum^{\log_{(\frac{10}{9})}n}_{k{=}0} (\frac{9}{10})^k \cdot n = n \cdot \frac{1-(\frac{9}{10})^{\log_{\frac{10}{9}}n+1}}{1-\frac{9}{10}}$\\
+$n \cdot \frac{1-(\frac{9}{10})^{\log_{\frac{10}{9}}n+1}}{1-\frac{9}{10}} = n\cdot\frac{1-\frac{1}{n}\cdot\frac{9}{10}}{\frac{1}{10}}$\\
+$T(n) = 10n - 9$\\
+Thus, $T(n) = \Theta(n)$$\blacksquare$\\
 
-(a)   
+\newpage
 
-...  \\
+(b)\\
 
-
-(b)
-
+$T(1) = 1$ \\\\
+$T(2) = T(\frac{18}{10}) + 2 = 3.8$ \\\\
+$T(3) = T(\frac{27}{10}) + 3 = 5.7$ \\\\
+$T(100) = T(\frac{900}{10}) + 100 = 190$ \\\\
+This begins to look like $2n$ \\\\
+Hypothesis: $T(k) \leq ck$ for all $k < n$\\\\
+Substitute: $T(n) \leq c \cdot (\frac{9n}{10}) + n$\\\\
+$T(n) \leq n(0.9c+1)$\\\\
+This is the desired form of $n \cdot c$\\\\
+$0.9c + 1 \leq c$ \hspace{2cm} for all $c\geq10$ \\\\
+Thus, $T(n) \leq 10n$ \hspace{2cm} for all $c\geq10$\\\\
+Therefore, $T(n) = O(n)$$\blacksquare$\\\\
 
 }
 
