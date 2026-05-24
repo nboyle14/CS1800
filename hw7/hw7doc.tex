@@ -6,17 +6,7 @@
 
 \begin{document}  
 \pagestyle{empty}
- 
 
-
-
-
-%\vskip0.5in
-
-
-%\noindent {\small This document is property of Northeastern University.  Unauthorized distribution of the content is not~permitted.} \\
-
-%\vskip0.5cm
 
 
 
@@ -27,6 +17,44 @@ Let $G$ be a directed graph with $n$ vertices, encoded as an adjacency matrix. D
 determine whether or not $G$ contains a vertex with $n - 1$ edges pointing in, and no edges pointing
 out, by checking $O(n)$ elements of the matrix. You should explain why your strategy is correct.\\
 
+{\color{blue} Answer:  \\
+First we start at the element (1,2), and check to see if it is a 1 or a 0. If it is a 0, we move right 1 element and eliminate the current column as a candidate. 
+If it is a 1, we move down one element and eliminate the current row as a candidate. If we land on a diagonal element we simply move right and continue. 
+We continue this until we reach the end of the matrix. Once we have reached the end of the matrix, if there is one vertex that has not been eliminated we check to 
+see if that vertex has a row of all zeros and a column of all ones barring the diagonal element. \\\\
+
+A lower level explaination would look like this:\\\\
+\begin{tabbing}
+\hspace{1cm}\=\hspace{8cm}\= \kill
+x,y = row,col\\
+while (x or y is less than $|v|$)\\
+\> if (x = y) move to (x+1,y)\\
+\> else if ((x,y = 1)) eliminate vertex x and move to (x+1,y)\\
+\> else if ((x,y = 0)) eliminate vertex y and move to (x,y+1)\\
+check if surving vertex row is all zero\\
+check if surviing vertex column is all one besides diagonal element\\\\
+\end{tabbing}
+
+This strategy is correct because, for a vertex $k$ on a directed graph with n verticies to have n-1 edges, it must be a neighbor to all other verticies. 
+And, for all of the edges to be pointing in, the edges must begin at the neighbor and point to the vertex. On an adjacency matrix this presents itself in a matrix with 
+a row of all zeros and a column of all ones besides the diagonal element which must be a zero (no self loop). This is becuase the row indicies represent the origin verticies
+and the column indices represent the destination verticies. Thus, for $k$ to be a neighbor of all other verticies and the edges to be pointing in, the edges must
+originate from all other verticies and arrive at $k$ as a destination and no edges must originate from $k$. An example of such an adjacency matrix with vertex $k=5$ 
+satisfying the above conditions is shown below. \\\\  
+
+$$
+\begin{pmatrix}
+1 & 1 & 0 & 0 & 1\\
+0 & 0 & 1 & 0 & 1\\
+0 & 0 & 0 & 1 & 1\\
+1 & 0 & 1 & 0 & 1\\
+0 & 0 & 0 & 0 & 0\\
+\end{pmatrix}
+$$
+
+
+
+}
 
 
 
@@ -36,25 +64,3 @@ out, by checking $O(n)$ elements of the matrix. You should explain why your stra
 
 
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
