@@ -37,15 +37,45 @@ Let $T$ represent a binary tree that has $n$ nodes and satisfies the following p
 
 
 
-(a) Suppose that $T$ has only orange nodes. What is its depth?
+(a) Suppose that $T$ has only orange nodes. What is its depth?\\
+{\color{blue} Answer: Due to conditions 1 and 4, the tree must be a perfect binary tree. This is because all leaves must be at the same depth for each path
+to have the same number of orange nodes. Additionally, a perfect binary tree has two children for every non-leaf node. Thus, the depth of a perfect binary tree with
+$n$ nodes is $\log_2(n+1) - 1$.\\
+}
 
-(b) What is the largest number of blue nodes that $T$ might have?
+(b) What is the largest number of blue nodes that $T$ might have?\\
+{\color{blue} Answer: The largest number of blue nodes that $T$ might have ocurrs when the root node it orange and all other odd level nodes are all blue. Thus, the total number of blue nodes 
+is the sum of the nodes at all odd levels to the depth of the perfect binary tree. This is given by the geometric summation below:\\
+$\sum_{i=0}^{\log_2(n+1)-1} 2^{2i+1}$ \\
+$= 2\sum_{i=0}^{\log_2(n+1)-1} 4^i $\\
+$= 2 \cdot (\frac{4^{\frac{\log_2(n+1)}{2}}-1}{4-1})$\\
+$= 2 \cdot (\frac{2^{\log_2(n+1)}-1}{3})$\\
+$= 2\cdot\frac{(n+1-1)}{3}$\\
+Maximum number of blue nodes: $\frac{2n}{3}$\\
+}
 
-(c) Let $p$ be the length of the shortest path in $T$ that begins at the root and ends at a leaf. Let $q$ be the length of the longest root-to-leaf path in $T$.   What is the largest possible ratio,  $q / p$?
 
-(d) What is the maximum depth that a leaf might have in $T$?
 
-(e) What is the minimum depth that a leaf might have in $T$?
+(c) Let $p$ be the length of the shortest path in $T$ that begins at the root and ends at a leaf. Let $q$ be the length of the longest root-to-leaf path in $T$.   
+What is the largest possible ratio,  $q / p$?\\
+{\color{blue} Answer: The largest possible ratio $q/p$ occurs when the the root is orange and the shortest path from the root to a leaf has only orange nodes and the 
+longest path from the root to a leaf has alternating blue and orange nodes ending on a blue node. This allows condition 4 to be met by having equal number of orange 
+nodes on both sides with one side being longer than the other. the longer side will always have double the amount of nodes as the short side. Thus, the largest possible
+ratio $\frac{q}{p} = 2$\\
+}
+
+(d) What is the maximum depth that a leaf might have in $T$?\\
+{\color{blue} Answer: The maximum depth that a leaf might have in $T$ occurs when the root is orange and one side alternates from orange to blue. 
+This allows condition 4 to be met by having equal number of orange nodes on both sides with one side being longer than the other. The short side will have only orange to 
+meet condition 4 which means that the short side will have the minimum leaf. This is identical to (c) so we can use the fact that the long side will always have 
+a length that is twice as long as the short side. Thus, if the Tree has $l$ levels on the short side there are $2^l$ nodes i.e. $n = 2^l$. Solving for $l$ 
+gives $l = \log_2n$. And we know the long side is twice as long as the short side. Thus, the maximum possible leaf depth is $2(\log_2n-2)$.\\
+}
+(e) What is the minimum depth that a leaf might have in $T$?\\
+{\color{blue} Answer: The minimum depth ocurrs when the tree is perfect becuase there is no imbalance in the decendants. We know the depth of a perfect tree from part (a). 
+Thus, the minimum possible depth is $\log_2(n+1) - 1$.\\
+
+}
 
 (f) Draw a tree that satisfies the four given properties, such that the left subtree (of the root) has the smallest possible number of nodes (given the small tree size that you chose).  Your example should be small, but also large enough so that we can clearly understand what your tree would look like if it were generalized to  huge values of $n$.
 
