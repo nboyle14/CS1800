@@ -1,0 +1,48 @@
+\documentclass[12pt]{article} 
+
+\usepackage[top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm]{geometry}
+\usepackage{color,graphicx,amsmath,mathtools,amssymb,amsthm}
+\pagestyle{plain}
+
+\begin{document}  
+\pagestyle{empty}
+ 
+
+
+
+
+%\vskip0.5in
+%
+%
+%\noindent {\small This document is property of Northeastern University.  Unauthorized distribution of the content is not~permitted.}
+%
+%\vskip0.5cm
+
+
+
+
+
+\begin{enumerate}
+\item
+1. Let G be a plane graph with V vertices, E edges, F faces and C components.
+Prove that $$V - E + F - C = 1$$
+
+Induction on C:\\
+
+Base case: If there is there is only 1 component, then we have, by Euler's formula, that $$V - E + F - C = V - E + F - 1 = 1$$
+Induction: Assume that V - E + F - C = 1 holds for all planar graph components with fewer than k components. 
+Let there be k planar graph components. An edge is then added between two of the components to connect them this decreases the amount of components by 1. 
+This edge will add 1 to E and subtract 1 from C, but will not change V or F. Thus, we have that\\ 
+$$V - (E + 1) + F - (C - 1) = 1$$
+which simplifies to\\
+$$V - E + F - C = 1$$\\
+Thus, by induction, we have that V - E + F - C = 1 for all planar graphs.\\
+
+
+
+\end{enumerate} 
+
+
+
+
+\end{document}
