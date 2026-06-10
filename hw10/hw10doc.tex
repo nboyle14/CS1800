@@ -1,0 +1,51 @@
+\documentclass[12pt]{article} 
+
+\usepackage[top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm]{geometry}
+\usepackage{color,graphicx,amsmath,mathtools,amssymb,amsthm}
+\pagestyle{plain}
+
+\begin{document}  
+\pagestyle{empty}
+ 
+
+
+
+
+%\vskip0.5in
+%
+%
+%\noindent {\small This document is property of Northeastern University.  Unauthorized distribution of the content is not~permitted.}
+%
+%\vskip0.5cm
+
+
+
+
+
+
+
+Let $c$ be the number of chocolate chip cookies and $m$ be the number of caramel cookies. The following must be true for any selection of cookies:
+$c+m=8$, $c\geq 2$, and $m\geq 2$.\\
+\begin{enumerate}
+\item
+If the cookies of the same flavor are indistinguishable, then the only selection that matters is the number of chocolate chip cookies and caramel cookies 
+that are selected. Thus, each pair of cookies $(c,m)$ pertains to one such selection. Which are the following:\\
+$$(2,6), (3,5), (4,4), (5,3), (6,2)$$\\
+Thus the formula for the total number of selections is:\\
+$$\sum\limits_{c=2}^{6} 1 $$\\
+And the total number of possible selections is $5$.\\
+\item
+If every cookie is distinguishable and $c$ amount of chocolate chip cookies are chosen, then there $8-c$ caramel cookies must be chosen. In other words, 
+there are 10 chocolate chip cookies to choose from and $c$ choices to make. Moreover, there are 12 caramel cookies to choose from and $8-c$ choices to make. 
+Thus, the formula for the total number of selections is:\\
+$$\sum\limits_{c=2}^{6} \binom{10}{c} \cdot \binom{12}{8-c}$$\\
+Which evaluates to $309870$, which is the total numbe of possible selections.\\
+
+
+
+\end{enumerate} 
+
+
+
+
+\end{document}
